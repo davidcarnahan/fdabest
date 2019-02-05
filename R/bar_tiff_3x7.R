@@ -1,12 +1,6 @@
-#|--------------------
-#| This package was created to help generate graphs and tables in an efficient,
-#| standardized fashion for the FDA BEST initiative.
-#|
-#| Author: David Carnahan, MD, MSCE
-#| Date Created: 5 February 2019
-#| Date Modified: 5 February 2010
-#| Version 0.10
-#|--------------------
+#|--------------------------------------------------
+#| bar graph with tiff output with 3 x 7 dimensions
+#|--------------------------------------------------
 
 bar_tiff_3x7 <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
 
