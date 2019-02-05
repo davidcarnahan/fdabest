@@ -8,7 +8,7 @@
 #| Version 0.10
 #|--------------------
 
-cnt_bar_3x7t <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
+bar_tiff_3x7 <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
 
   require(ggplot2)
   require(stringi)
