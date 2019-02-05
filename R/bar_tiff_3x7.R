@@ -31,7 +31,9 @@ bar_tiff_3x7 <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
   }
 
   # names for saving graph to directory
-  tiff_nm <- paste0(ylab, "-by-", xlab, ".tiff")
+  xlab2 <- gsub(" ", "", xlab)
+  ylab2 <- gsub(" ", "", ylab)
+  tiff_nm <- paste0(ylab2, "-by-", xlab2, ".tiff")
   png_xd <- paste0(dir, "/", tiff_nm)
 
   # create tiff product
