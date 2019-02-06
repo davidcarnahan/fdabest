@@ -26,11 +26,11 @@
 
 bar_tiff_3x7 <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
 
-  requireNamespace(ggplot2, quietly = TRUE)
-  requireNamespace(scales, quietly = TRUE)
-  requireNamespace(stringi, quietly = TRUE)
-  requireNamespace(Cairo, quietly = TRUE)
-  requireNamespace(grDevices, quietly = TRUE)
+  requireNamespace("ggplot2", quietly = TRUE)
+  requireNamespace("scales", quietly = TRUE)
+  requireNamespace("stringi", quietly = TRUE)
+  requireNamespace("Cairo", quietly = TRUE)
+  requireNamespace("grDevices", quietly = TRUE)
 
   attach(df)
 
