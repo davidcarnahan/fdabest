@@ -5,6 +5,6 @@ Version: 0.1.0
 Author: David Carnahan, MD, MSCE
 Maintainer: The package maintainer <dcarnahan@us.imshealth.com>
 Description: This package is intended to provide a convenient wrapper around commonly used for graphical and tabular output for the FDA BEST initiative. 
-License: MIT + file LICENSE
+License: GPL-2
 Encoding: UTF-8
 LazyData: true

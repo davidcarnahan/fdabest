@@ -18,7 +18,6 @@
 #' @export
 #' @examples
 #' @bar_tiff_3x7(mpg, cyl, hwy, "Mileage by Number of Cylinders")
-#'
 
 bar_tiff_3x7 <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
 
