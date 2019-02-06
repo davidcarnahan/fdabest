@@ -18,7 +18,6 @@
 #'
 #' @export
 #'
-#' @import dplyr
 #' @import ggplot2
 #' @import scales
 #' @import stringi
@@ -27,17 +26,13 @@
 
 bar_tiff_3x7 <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
 
-  library(ggplot2)
-  library(scales)
-  library(stringi)
-  library(Cairo)
-  library(dplyr)
-  attach(df)
+  requireNamespace(ggplot2, quietly = TRUE)
+  requireNamespace(scales, quietly = TRUE)
+  requireNamespace(stringi, quietly = TRUE)
+  requireNamespace(Cairo, quietly = TRUE)
+  requireNamespace(grDevices, quietly = TRUE)
 
-  # summarise table results if not aggregated
-  df <- df %>%
-    group_by(x) %>%
-    summarise(y = sum(y))
+  attach(df)
 
   # prepare variables for naming of file to be saved at the end
   dir <- getwd()

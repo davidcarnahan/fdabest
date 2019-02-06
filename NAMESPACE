@@ -2,11 +2,7 @@
 
 export(bar_tiff_3x7)
 import(Cairo)
-import(dev.off)
-import(dplyr)
 import(ggplot2)
 import(grDevices)
-import(rgb)
 import(scales)
 import(stringi)
-import(tiff)
