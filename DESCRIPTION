@@ -8,4 +8,5 @@ Description: This package is intended to provide a convenient wrapper around com
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
+Imports: Cairo, dplyr, ggplot2, scales, stringi
 RoxygenNote: 6.0.1

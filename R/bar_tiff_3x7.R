@@ -17,16 +17,27 @@
 #' @author David Carnahan <dcarnahan@@us.imshealth.com>
 #'
 #' @export
+#'
+#' @import dplyr
 #' @import ggplot2
+#' @import scales
 #' @import stringi
 #' @import Cairo
+#' @import grDevices
 
 bar_tiff_3x7 <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
 
-  require(ggplot2)
-  require(stringi)
-  require(Cairo)
+  library(ggplot2)
+  library(scales)
+  library(stringi)
+  library(Cairo)
+  library(dplyr)
   attach(df)
+
+  # summarise table results if not aggregated
+  df <- df %>%
+    group_by(x) %>%
+    summarise(y = sum(y))
 
   # prepare variables for naming of file to be saved at the end
   dir <- getwd()
