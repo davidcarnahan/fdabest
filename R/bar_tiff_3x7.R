@@ -1,6 +1,24 @@
-#|--------------------------------------------------
-#| bar graph with tiff output with 3 x 7 dimensions
-#|--------------------------------------------------
+#' Create a 3 x 7 Tiff Image
+#'
+#' This function has been designed to provide a standardized format for
+#' all FDA BEST intiative graphs. It will generate a 3x7 Tiff image of
+#' high resolution (300 dpi), and will save it to the working directory.
+#'
+#' @param df The dataframe loaded into the current environment to be used
+#' for the image creation.
+#' @param x The categorical variable to be used for the x-axis of the graph
+#' @param y The discrete variable to be used for the y-axis of the graph
+#' @param t The title desired for the graph (in quotes)
+#' @param xlab The label for the x-axis if different from the variable name in
+#' dataframe. By default, it will use the variable name.
+#' @param ylab The label for the y-axis if different from the variable name in
+#' dataframe. By default, it will use the variable name.
+#'
+#' @author David Carnahan <dcarnahan@@us.imshealth.com>
+#' @export
+#' @examples
+#' @bar_tiff_3x7(mpg, cyl, hwy, "Mileage by Number of Cylinders")
+#'
 
 bar_tiff_3x7 <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
 
@@ -42,7 +60,7 @@ bar_tiff_3x7 <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
 
   # plot graph
   ggx <- ggplot(df, aes(x, y)) +
-    geom_bar(colour="black", fill=rgb(0.2,0.4,0.6,1) , width=.8, stat="identity") +
+    geom_bar(fill=rgb(0.2,0.4,0.6,1) , width=.8, stat="identity") +
     geom_text(aes(label=y), vjust=0, size = 3) +
     scale_y_continuous() +
     scale_fill_manual(values = "darkblue") +
