@@ -15,8 +15,11 @@
 #' dataframe. By default, it will use the variable name.
 #'
 #' @author David Carnahan <dcarnahan@@us.imshealth.com>
+#'
 #' @export
-#' @import ggplot2, stringi, Cairo
+#' @import ggplot2
+#' @import stringi
+#' @import Cairo
 
 bar_tiff_3x7 <- function(df, x, y, t, xlab = x_nm, ylab = y_nm) {
 
